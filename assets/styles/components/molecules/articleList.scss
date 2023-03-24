@@ -1,0 +1,87 @@
+.articleList {
+    margin-bottom: 124px;
+    margin: 0 auto;
+    max-width: 1170px;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @media screen and (min-width: $breakpoint-desktop) {
+            flex-direction: row;
+            align-items: stretch;
+        }
+    }
+    &__service {
+        font-family: "Epilogue", sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 32px;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        color: #ef6d58;
+        @media screen and (min-width: $breakpoint-desktop) {
+            &__service {
+                background: rgb(40, 41, 62);
+                background: linear-gradient(
+                    180deg,
+                    rgba(40, 41, 62, 1) 95%,
+                    rgba(40, 41, 62, 1) 95%,
+                    rgba(253, 240, 233, 0.9921218487394958) 95%
+                );
+            }
+        }
+    }
+    &__subtitle {
+        font-style: normal;
+        font-weight: 800;
+        font-size: 40px;
+        line-height: 48px;
+        color: #ffffff;
+        margin-bottom: 35px;
+    }
+
+    &__article {
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        border: 1px solid #f3d1bf;
+        width: 100%;
+        padding-left: 28px;
+        padding-right: 28px;
+        background: white;
+    }
+
+    &__title {
+        font-size: 24px;
+        line-height: 32px;
+
+        margin-top: 41px;
+        color: rgba(57, 20, 0, 1);
+    }
+
+    &__picture {
+        padding-top: 48px;
+        @media (min-width: 1024px) {
+            flex-direction: row;
+        }
+    }
+    &__paragraph {
+        font-family: "Epilogue", sans-serif;
+        color: rgba(57, 20, 0, 0.64);
+        padding-top: 19px;
+        font-size: 16px;
+        line-height: 32px;
+    }
+    &__ancor {
+        white-space: nowrap;
+        padding-top: 26px;
+        padding-bottom: 52px;
+        width: 89px;
+        text-decoration: none;
+        color: rgba(57, 20, 0, 1);
+        font-size: 16px;
+        line-height: 32px;
+        font-family: "Epilogue", sans-serif;
+    }
+}
