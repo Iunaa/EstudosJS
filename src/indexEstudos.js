@@ -1,4 +1,4 @@
-import "./components/atoms/teste";
+
 
 const articleListContent = [{
     title: 'Design',
@@ -23,8 +23,14 @@ const articleListContent = [{
 
 ]
 
+const body = document.getElementsByTagName('body')[0]
+const img = setElement('img')
+
+
+
+
 const section = setElement('section')
-section.className = 'cardList'
+section.className = 'articleList'
 insertElement(body,section)
 
 for (let index = 0; index < articleListContent.length; index ++){
@@ -35,8 +41,9 @@ for (let index = 0; index < articleListContent.length; index ++){
 
     const picture = setElement('picture')
     insertElement (article, picture)
-
-    const img = setAttribute('src', articleList[index.imagePath])
+    console.log(articleListContent)
+    const img = setElement('img')
+    img.setAttribute('src', articleListContent[index].imagePath)
     insertElement(picture,img)
 
     const h4 = setElement('h4')
@@ -57,11 +64,15 @@ for (let index = 0; index < articleListContent.length; index ++){
 
 //função para criar elementos
 function setElement (element) {
+    console.log('teste', element)
     const temporaryElement = document.createElement(element)
+    console.log('teste', temporaryElement)
     return temporaryElement
 }
 
 //função p/ append no pai
 function insertElement(elementFather, elementChild){
+    console.log(elementFather)
+    console.log(elementChild)
     elementFather.appendChild(elementChild)
 }
