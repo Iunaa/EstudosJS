@@ -3,7 +3,7 @@
 const articleListContent = [{
     title: 'Design',
     paragraph: 'Agency provides a full service range including technical skills, design.',
-    anchor: 'Learn More etc',
+    anchor: 'Learn More',
     imagePath: './assets/img/group8.svg'
 
     

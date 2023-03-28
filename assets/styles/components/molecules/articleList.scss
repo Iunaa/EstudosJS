@@ -1,7 +1,13 @@
 .articleList {
+    display: flex;
+    flex-direction: column;
     margin-bottom: 124px;
     margin: 0 auto;
     max-width: 1170px;
+    @media screen and (min-width: $breakpoint-desktop) {
+        flex-direction: row;
+        align-items: stretch;
+    }
 
     &__container {
         display: flex;
@@ -47,6 +53,7 @@
         box-sizing: border-box;
         border: 1px solid #f3d1bf;
         width: 100%;
+        padding-top: 20px;
         padding-left: 28px;
         padding-right: 28px;
         background: white;
@@ -73,7 +80,7 @@
         font-size: 16px;
         line-height: 32px;
     }
-    &__ancor {
+    &__anchor {
         white-space: nowrap;
         padding-top: 26px;
         padding-bottom: 52px;
