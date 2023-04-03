@@ -23,7 +23,7 @@ const articleListContent = [{
 
 ]
 
-const body = document.getElementsByTagName('body')[0]
+const startfake = document.getElementById('startfake')
 const img = setElement('img')
 
 
@@ -31,10 +31,10 @@ const img = setElement('img')
 
 const section = setElement('section')
 section.className = 'articleList'
-insertElement(body,section)
+insertElement(startfake,section)
 
-for (let index = 0; index < articleListContent.length; index ++){
 
+articleListContent.map(element => {
     const article = setElement ('article') //cria o elemento
     article.className = 'articleList__article' //estilizar
     insertElement (section,article) //insere o elemento
@@ -43,24 +43,25 @@ for (let index = 0; index < articleListContent.length; index ++){
     insertElement (article, picture)
     console.log(articleListContent)
     const img = setElement('img')
-    img.setAttribute('src', articleListContent[index].imagePath)
+    img.setAttribute('src', element.imagePath)
     insertElement(picture,img)
 
     const h4 = setElement('h4')
-    h4.innerHTML = articleListContent[index].title
+    h4.innerHTML = element.title
     h4.className = 'articleList__title'
     insertElement(article, h4)
 
     const p = setElement('p')
-    p.innerHTML = articleListContent[index].paragraph
+    p.innerHTML = element.paragraph
     p.className = 'articleList__paragraph'
     insertElement(article, p)
 
     const a = setElement('a')
-    a.innerHTML = articleListContent[index].anchor
+    a.innerHTML = element.anchor
     a.className = 'articleList__anchor'
     insertElement(article, a)
-}
+})
+
 
 //função para criar elementos
 function setElement (element) {
