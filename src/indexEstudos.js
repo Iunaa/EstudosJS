@@ -35,9 +35,11 @@ insertElement(startfake,section)
 
 
 articleListContent.map(element => {
-    const article = setElement ('article') //cria o elemento
+    const article = setElement ('article2') //cria o elemento
     article.className = 'articleList__article' //estilizar
-    insertElement (section,article) //insere o elemento
+    insertElement (section,article) 
+    
+    //insere o elemento
 
     const picture = setElement('picture')
     insertElement (article, picture)
